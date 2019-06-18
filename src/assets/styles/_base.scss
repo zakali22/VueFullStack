@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+$lightblue: #339af0;
+$darkgrey: #373737b0;
+$darkgrey2: #888888ad;
+
+body {
+    font-family: "Noto Sans HK", sans-serif;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            & > *:first-child {
+                margin-right: 20px;
+            }
+            li {
+                font-size: 20px;
+                padding-bottom: 4px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.router-link-active {
+    border-bottom: 4px solid coral;
+    padding-bottom: 0;
+}

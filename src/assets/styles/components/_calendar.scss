@@ -1,0 +1,54 @@
+.calendar {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid red;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+
+    &__container {
+        display: flex;
+        min-width: 90%;
+        border: 1px solid green;
+        background: #474747;
+        &--day {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid coral;
+            &__header, &__event {
+                display: flex;
+                justify-content: center;
+            }
+            &__header {
+                background: $darkgrey;;
+                color: white;
+                text-transform: uppercase;
+                padding: 10px 0;
+                h4 {
+                    font-weight: 100;
+                }
+            }
+            &__event {
+                background: lightcoral;
+                color: $darkgrey;
+                margin: 15px;
+                font-size: 17px;
+                padding: 5px 0;
+                flex-direction: column;
+                align-items: center;
+                .edits {
+                    align-self: stretch;
+                    display: flex;
+                    justify-content: center;
+                    padding: 10px 0;
+                    & > *:first-child {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,82 @@
+.voting {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+
+    & > * {
+        margin-bottom: 20px;
+    }
+    &__wrapper {
+        min-width: 40%;
+    }
+    &__container {
+        border: 2px solid lightslategrey;
+        border-radius: 15px;
+        display: flex;
+        align-items: flex-start;
+        padding: 10px;
+        & > *:first-child {
+            margin-right: 20px;
+        }
+
+        &--profile {
+            height: 100px;
+            width: 100px;
+            background: red;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                font-size: 70px;
+                color: lightgrey;
+                opacity: 0.6;
+            }
+        }
+
+        &--desc {
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            & > *:not(:last-child){
+                margin-bottom: 7px;
+            }
+            h3 {
+                color: $lightblue;
+            }
+            &__submission {
+                display: flex;
+                align-items: center;
+                div {
+                    margin-left: 10px;
+                    height: 40px;
+                    width: 40px;
+                    background: red;
+                    border-radius: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    i {
+                        font-size: 20px;
+                        color: lightgrey;
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+
+        &--rating {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            cursor: pointer;
+            & > *:first-child {
+                margin-right: 7px;
+            }
+            p {
+                color: $lightblue;
+            }
+        }
+    }
+}
